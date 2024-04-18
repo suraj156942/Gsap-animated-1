@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>		
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@800&display=swap" rel="stylesheet">
+	<style type="text/css">
+		*{ margin:0;padding: 0;box-sizing: border-box; }
+
+
+html,body{
+	height: 100%;
+	width: 100%;
+	/*background-color: red;*/
+}
+/*.navbar-inverse {
+     background-color: transparent !important; 
+    border-color: #080808 !important;
+}*/
+.main{
+	height: 100%;
+	width: 100%;
+	background-color: #79554887;
+	display: flex;
+}
+.part1{
+	height:100%;
+	width:26%;
+	/*background-color: red;*/
+}
+.part2{
+	height:100%;
+	width:0%;
+	background-color: #F8FFD2;
+    background-image: url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bW9kZWx8ZW58MHx8MHx8fDA%3D");
+	
+	background-size: cover;
+	
+	background-position: center;
+	background-attachment: fixed;
+
+
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #00000075;
+}
+.part3{
+	height:100%;
+	width:14%;
+	/*background-color:#D0F288;*/
+}
+.inner_text{
+	height:auto;
+	position: absolute;
+	width:400px;
+	/*background-color: red;*/
+	left:10%;
+	top:50%;
+	transform: translate(0,-50%);
+}
+.inner_text>h1{
+	font-size: 54px;
+    font-family: 'Roboto', sans-serif;
+   
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color:white;
+
+}
+.small_image {
+    width: 300px;
+    height: 300px;
+    background-image: url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bW9kZWx8ZW58MHx8MHx8fDA%3D");
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: -5px -3px 6px 6px #ffffff21;
+}
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+/*.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}*/
+	</style>
+</head>
+<body>
+	<div class="main">
+
+
+		<div class="part1"></div>
+		<div class="part2">
+			  <div class="overlay"></div>
+		</div>
+		<div class="part3"></div>
+		<div class="inner_text">
+			<h1>Nature</h1>
+			<h1>Morte</h1>
+			<h1>For</h1>
+			<h1>Sharpe's</h1>
+		</div>
+		<div class="small_image">
+			<div class="overlay"></div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script type="text/javascript">
+		
+var t1=gsap.timeline()
+
+
+t1.to(".part2",{
+    width:"60%",
+	ease:Expo.easeInOut,
+	duration:3,
+
+})
+
+t1.from("h1",{
+	x:-500,
+	opacity:0,
+	// duration:5,s
+	stagger:0.5
+})
+t1.from(".small_image",{
+scale:0.2,
+opacity:0
+})
+
+// part2 ,overlay
+	</script>
+</body>
+</html>
